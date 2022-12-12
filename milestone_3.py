@@ -24,14 +24,18 @@ def check_guess(guess):
 def ask_for_input():
     print('Please enter a single letter: ')
     guess = input()
-    while (len(guess) != 1 or guess.isalpha() == False) == True:
-        print('Invalid letter. Please enter a single alphabetical character.')
-        guess = input()
-    guess = guess
+    while True:
+        if len(guess) == 1 and guess.isalpha():
+            break
+        else:
+            print('Invalid letter. Please enter a single alphabetical character.')
+            guess = input()
+    
     check_guess(guess)
-
+    return guess
+    
 ask_for_input()
-
+    
 
 
 
