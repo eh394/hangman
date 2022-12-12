@@ -24,7 +24,7 @@ def check_guess(guess):
 def ask_for_input():
     print('Please enter a single letter: ')
     guess = input()
-    while len(guess) != 1 or guess.lower() not in alphabet:
+    while (len(guess) != 1 or guess.isalpha() == False) == True:
         print('Invalid letter. Please enter a single alphabetical character.')
         guess = input()
     guess = guess
