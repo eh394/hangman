@@ -2,7 +2,7 @@ import random
 
 word_list = ['raspberry', 'peach', 'blackberry', 'grape', 'plum']
 
-class Hagman:
+class Hangman:
     def __init__(self, word_list, num_lives = 5):
         self.word = random.choice(word_list)
         self.word_guessed = ['_'] * len(self.word)
