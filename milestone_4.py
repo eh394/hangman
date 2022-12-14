@@ -25,8 +25,8 @@ class Hangman:
             elif guess in self.list_of_guesses:
                 print('You already tried that letter!')
             else:
-                check_guess(guess)
-                self.list_of_guesses.add(guess)
+                self.check_guess(guess)
+                self.list_of_guesses.append(guess)
 
 bla = Hangman(word_list)
 bla.ask_for_input()
